@@ -1,5 +1,5 @@
 import numpy as np
-from mpcg import MPCGSolver
+from solvers.mpcg import MPCGSolver
 
 def test_filter_one_particle_unconstrained():
     r"""

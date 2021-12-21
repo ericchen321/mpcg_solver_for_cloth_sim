@@ -23,7 +23,7 @@ class MPCGSolver:
         self._num_particles = self._z.shape[0]
         self._S = self.compute_S(S_in)
         self.compute_M()
-        self._epsi = 1e-8
+        self._epsi = 1e-12
 
     @property
     def num_particles(self):
@@ -121,7 +121,8 @@ class MPCGSolver:
     
     def solve(self):
         r"""
-        Solve A * del_v = b. Return del_v.
+        Solve A * del_v = b. Return del_v. Algorithm adapted
+        from Baraff and Witkin's 98' paper.
         """
         # initialize del_v
         del_v = np.reshape(
