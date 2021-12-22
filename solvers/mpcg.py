@@ -2,7 +2,8 @@ import numpy as np
 
 class MPCGSolver:
     r"""
-    Solve system Ax = b with the MPCG method.
+    Solve system Ax = b with the MPCG method. Method adapted
+    from Baraff and Witkin, 98'.
     """
 
     def __init__(self, A_in, b_in, S_in, z_in) -> None:
@@ -47,7 +48,7 @@ class MPCGSolver:
         return self._b
     
     @property
-    def P(self):
+    def M(self):
         r"""
         Get the preconditioner matrix M.
         """
@@ -122,7 +123,7 @@ class MPCGSolver:
     def solve(self):
         r"""
         Solve A * del_v = b. Return del_v. Algorithm adapted
-        from Baraff and Witkin's 98' paper.
+        from Baraff and Witkin, 98'.
         """
         # initialize del_v
         del_v = np.reshape(
