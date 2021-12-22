@@ -4,7 +4,7 @@ MATH 607E (2021WT1) Term Project: The Modified Preconditioned Conjugate Gradient
 Contains source code and the project report.
 
 # Summary
-Investigated the Preconditioned Conjugate Gradient (PCG) method following [Shewchuk's introductory text](https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf). Implemented an MPCG solver and integrated it to my 4x4 square-shaped cloth simulator.
+Investigated the Preconditioned Conjugate Gradient (PCG) method following [Shewchuk's introductory text](https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf). Implemented [Baraff and Witkin](https://www.cs.cmu.edu/~baraff/papers/sig98.pdf)'s MPCG solver and integrated it to my 4x4 square-shaped cloth simulator.
 
 # File Structure
 * `sim.ipynb`: MPCG-integrated cloth simulator
